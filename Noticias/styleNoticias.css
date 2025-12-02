@@ -100,11 +100,11 @@ header .navbar {
 .peixe {
     max-width: 150px; 
     height: auto;
-}
-
-.peixe {
     float: left;
     margin-right: 10px;
+    position: absolute;
+    left:1px;
+    cursor: pointer;
 }
 
 .navbar .nav-menu .nav-link {
