@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("azul.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+
+.titulo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.titulo {
+    background-color: #0F56A6;
+    color: white;
+    display: inline-block;
+    padding: 20px 80px;
+    border-radius: 30px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.card {
+    text-align: center;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+.nome {
+    background-color: #0F56A6;
+    padding: 10px 25px;
+    border-radius: 20px;
+    color: white;
+    width: fit-content;
+    margin: 10px auto 0;
+    font-size: 18px;
+}
+
+
+.voltar-container {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.voltar {
+    background-color: #0F56A6;
+    color: white;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.voltar:hover {
+    background-color: #093f7a;
+    cursor: pointer;
+}

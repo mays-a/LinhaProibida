@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Linha Proibida</title>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styleHome.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="header-row">
+        <div class="brand-area">
+            <img src="logo.png" class="imagem-peixe" alt="Logo">
+            <h2 class="logo-text">Linha Proibida</h2>
+        </div>
+
+        <!-- BARRA DE PESQUISA NO TOPO À DIREITA -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Pesquisar...">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <!-- MENU CENTRALIZADO ABAIXO -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="indexHome.html">Home</a></li>
+            <li><a href="../Sobre Nós/sobrenos.html">Sobre Nós</a></li>
+            <li><a href="../Noticias/indexNoticias.html">Notícias</a></li>
+            <li><a href="../Artigos/artigos.html">Artigos</a></li>
+            <li><a href="../Quiz/indexQuiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Título do slide -->
+<h2 id="slideTitle" class="slide-title">Título Inicial</h2>
+
+<!-- Container principal para controlar tamanho do carousel -->
+<div class="carousel">
+  <!-- Container dos slides -->
+  <div class="slides">
+      <article class="slide" data-title="Oceanógrafos alertam para o risco da pesca excessiva de peixes">
+          <img src="not1.png" alt="Slide 1">
+      </article>
+
+      <article class="slide" data-title="Os limites de captura ajudam a proteger as espécies e garantem o futuro da pesca">
+          <img src="not2.png" alt="Slide 2">
+      </article>
+
+      <article class="slide" data-title="Pesca sustentável. O fundo amazônico tem por finalidade captar ações para as ações de prevenção monitoramento e conservação ambiental">
+          <img src="not3.png" alt="Slide 3">
+      </article>
+  </div>
+
+  <!-- Botões de navegação (coloque dentro do .carousel para melhor controle visual) -->
+  <button id="prev" class="arrow left">&#10094;</button>
+  <button id="next" class="arrow right">&#10095;</button>
+</div>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Linha Proibida</p>
+  </footer>
+
+  <script src="scriptHome.js"></script>
+
+</body>
+
+</html>
+
