@@ -1,0 +1,333 @@
+:root{
+  --nav-blue: #1f4f9b;
+  --nav-blue-dark: #163b73;
+  --bg: #f2efe9;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color:#222;
+}
+
+/*HEADER*/
+.top-header{
+  background: var(--nav-blue);
+  padding: 12px 24px 0;
+  color: white;
+}
+
+/* Linha superior: logo esquerda | busca direita */
+.header-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-area{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-text{
+  font-size: 28px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.search-box{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  width:260px;
+  padding:6px 10px;
+  border-radius:8px;
+  background: rgba(255,255,255,0.18);
+}
+
+.search-box input{
+  flex:1;
+  border:0;
+  outline:0;
+  background:transparent;
+  color: #fff;
+  font-size:15px;
+}
+
+.search-box input::placeholder{
+  color: rgba(255,255,255,0.75);
+}
+
+.search-box button{
+  background: rgba(255,255,255,0.20);
+  border: 0;
+  padding:6px 8px;
+  border-radius:6px;
+  cursor:pointer;
+  color:white;
+}
+
+/* MENU CENTRALIZADO ABAIXO */
+.main-nav{
+  background: var(--nav-blue-dark);
+  padding: 12px 0;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.20);
+}
+
+.main-nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content:center;
+  gap:48px;
+}
+
+.main-nav a{
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 0;
+  transition: color .3s ease;
+}
+
+/* Animação da linha branca aparecendo */
+.main-nav a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: width .30s ease;
+}
+
+/* Efeito ao passar o mouse */
+.main-nav a:hover{
+  color: #f5faff;
+}
+
+.main-nav a:hover::after{
+  width: 100%;
+}
+
+/*Efeito do menu ativo*/
+.main-nav li.active a::after{
+  width: 100%;
+}
+
+.container{
+  max-width:980px;
+  margin:28px auto;
+  padding:0 18px;
+}
+
+/* hero-card / slide */
+.hero-card{
+  background: #ffffff;
+  padding:28px;
+  border-radius:6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.carousel{
+  position:relative;
+  overflow:hidden;
+  border-radius:8px;
+  background: #0b7ea1;
+}
+
+.slides{
+  display:flex;
+  transition: transform .45s ease;
+  will-change: transform;
+}
+
+
+
+.caption{
+  position:absolute;
+  left:28px;
+  bottom:26px;
+  max-width:70%;
+  text-shadow: 0 6px 12px rgba(0,0,0,0.6);
+}
+
+.caption h2{
+  margin:0;
+  font-family:'Merriweather', serif;
+  font-size:26px;
+  font-weight:700;
+  line-height:1.12;
+  color: #f1f6f8;
+}
+
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background: rgba(0,0,0,0.35);
+  color:white;
+  border:none;
+  width:44px;
+  height:44px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.arrow.left{ left:12px; }
+.arrow.right{ right:12px; }
+
+.arrow:hover{ background: rgba(0,0,0,0.55); }
+
+.site-footer{
+  text-align:center;
+  padding:18px 0 60px;
+  color:#666;
+}
+
+/* RESPONSIVO */
+@media (max-width:800px){
+  .logo-text{ font-size:22px; }
+  .slide img{ height:260px; }
+  .caption h2{ font-size:20px; max-width:85%; }
+  .main-nav ul{ gap:24px; }
+}
+
+@media (max-width:480px){
+  .logo-text{ font-size:20px; }
+  .slide img{ height:220px; }
+  .caption h2{ font-size:18px; }
+  .main-nav ul{ flex-wrap:wrap; gap:14px; font-size:16px }
+  .search-ico{ display:none; }
+}
+
+.imagem-peixe{
+  height: 90px;     /* altura ideal */
+  width: auto;      /* mantém proporção correta */
+  object-fit: contain;
+}
+/*Slides*/
+
+.carousel {
+  width: 720px;         /* tamanho fixo próximo da referência */
+  max-width: 90vw;      /* responsivo em telas pequenas */
+  height: 320px;        /* altura menor e proporcional */
+  margin: 40px auto;    /* centralizado horizontalmente e espaço em cima/baixo */
+  background: #0b3b71;  /* azul escuro parecido com a referência */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  color: white;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  filter: brightness(0.8);
+}
+
+.slide-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  max-width: 70%;
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f1f6f8;
+  text-shadow: 0 6px 12px rgba(0,0,0,0.6);
+  line-height: 1.2;
+  user-select: none;
+  pointer-events: none;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.35);
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  user-select: none;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 12px;
+}
+
+.arrow.right {
+  right: 12px;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.55);
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+  .carousel {
+    width: 90vw;
+    height: 260px;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
+/* Título centralizado no carousel */
+.slide-title {
+  position: absolute;
+  top: 50%;                /* verticalmente centralizado */
+  left: 50%;               /* horizontalmente centralizado */
+  transform: translate(-50%, -50%);
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;             /* preto */
+  text-align: center;
+  z-index: 5;              /* acima do slide */
+  pointer-events: none;
+  user-select: none;
+}
